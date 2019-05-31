@@ -1,4 +1,9 @@
 function createMenu()
+    local _menuPool = NativeUI.CreatePool()
+    local _mainMenu = NativeUI.CreateMenu("Radio", "~b~Select TokoVoip radio", 0, 0)
+    _menuPool:Add(_mainMenu)
+
+    _menuPool:MouseControlsEnabled(false)
     local items = {"off", "on"}
     local radio1 = NativeUI.CreateSliderItem("Police radio", items, 1, false)
     menu:AddItem(radio1)
