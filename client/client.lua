@@ -3,7 +3,7 @@ local _menuPool = NativeUI.CreatePool()
 local mainMenu = NativeUI.CreateMenu("Radio", "~b~Select TokoVoip radio", 0, 0) -- Description is not working? Getting a value is `nil` here.
 _menuPool:Add(mainMenu)
 
-
+-- RADIOS
 local state = {"Off", "On"}
 local radio1 = NativeUI.CreateListItem("Police radio", state, false)
 mainMenu:AddItem(radio1)

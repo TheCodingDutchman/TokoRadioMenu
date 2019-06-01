@@ -6,3 +6,7 @@ client_scripts {
   "@NativeUI/NativeUI.lua",
   "client/client.lua"
 }
+
+dependencies {
+	"NativeUI"
+}
