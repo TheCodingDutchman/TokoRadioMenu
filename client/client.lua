@@ -1,8 +1,9 @@
+-- NATIVEUI MENUS
 local _menuPool = NativeUI.CreatePool()
-
 -- local mainMenu = NativeUI.CreateMenu("Radio", "~b~Select TokoVoip radio", 0, 0) -- Description is not working? Getting a value is `nil` here.
 local mainMenu = NativeUI.CreateMenu("Radio", nil, 0, 0)
 _menuPool:Add(mainMenu)
+
 --[[ Error of that it says nil, this is the one of MouseControlsEnabled
 [   4252813] Error running call reference function for resource TokoRadioMenu: citizen:/scripting/lua/scheduler.lua:405: @TokoRadioMenu/NativeUILua-Reloaded/UIMenu/MenuPool.lua:168: attempt to call a nil value (global 'tobool')
 [   4252828] stack traceback:
@@ -35,6 +36,8 @@ currentSelectedIndex = item:IndexToItem(index)
         end
     end
 end
+
+-- COMMANDS
 RegisterCommand("radio", function()
     TriggerEvent('chat:addMessage', {
 	  color = { 255, 0, 0},
