@@ -29,5 +29,5 @@ client_scripts {
   "NativeUILua-Reloaded/UIMenu/panels/UIMenuStatisticsPanel.lua",
   "NativeUILua-Reloaded/UIMenu/UIMenu.lua",
   "NativeUILua-Reloaded/UIMenu/MenuPool.lua",
-	'client/client.lua'
+  "client/client.lua"
 }
