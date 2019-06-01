@@ -40,7 +40,7 @@ function UIMenuSliderItem.New(Text, Items, Index, Description, Divider, SliderCo
     local _UIMenuSliderItem = {
         Base = UIMenuItem.New(Text or "", Description or ""),
         Items = Items,
-        ShowDivider = tobool(Divider),
+        ShowDivider = false, --tobool(Divider), -- This is hardcoded, because of the problem stated in client.lua
         LeftArrow = Sprite.New("commonmenu", "arrowleft", 0, 105, 25, 25),
         RightArrow = Sprite.New("commonmenu", "arrowright", 0, 105, 25, 25),
         Background = UIResRectangle.New(0, 0, 150, 10, _BackgroundSliderColors.R, _BackgroundSliderColors.G, _BackgroundSliderColors.B, _BackgroundSliderColors.A),
