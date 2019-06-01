@@ -28,7 +28,7 @@ RegisterCommand("radio", function()
 	  multiline = true,
 	  args = {"TokoRadioMenu", state}
 	})
-    local radio1 = NativeUI.CreateSliderItem("Police radio", state, nil, nil) -- Devider is hard coded to false(Line 43, in UIMenuSliderItem.lua). Same problem as above. Am I doing something wrong?
+    local radio1 = NativeUI.CreateSliderItem("Police radio", state, nil, "devider variable") -- Devider is hard coded to false(Line 43, in UIMenuSliderItem.lua). Same problem as above. Am I doing something wrong?
     _mainMenu:AddItem(radio1)
     _mainMenu.OnSliderChange = function(sender, item, index)
         if item == radio1 then
