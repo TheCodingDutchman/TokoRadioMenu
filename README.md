@@ -13,6 +13,7 @@ Then put both into the resource folder and add to the server.cfg:
 start NativeUI
 start TokoRadioMenu
 ```
+To open the menu, press `B` in game.
 
 ## Configuring and more
 For more info look at the [wiki](https://github.com/GameMaster2030/TokoRadioMenu/wiki)
