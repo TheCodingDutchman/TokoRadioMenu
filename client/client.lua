@@ -7,6 +7,18 @@ _menuPool:Add(mainMenu)
 local state = {"Off", "On"}
 local radio1 = NativeUI.CreateListItem("Police radio", state, false)
 mainMenu:AddItem(radio1)
+-- KEYBINDS
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+        _menuPool:ProcessMenus()
+        if IsControlJustPressed(1, 29) then
+            mainMenu:Visible(not mainMenu:Visible())
+        end
+    end
+end)
+
+-- MENU FUNCTIONS
 mainMenu.OnListChange = function(sender, item, index)
 if item == radio1 then
 currentSelectedIndex = item:IndexToItem(index)
@@ -21,22 +33,4 @@ currentSelectedIndex = item:IndexToItem(index)
         end
     end
 end
-
--- COMMANDS
-RegisterCommand("radio", function()
-	_menuPool:ProcessMenus()
-    mainMenu:Visible(not mainMenu:Visible())
-end)
-end
-
--- Testing script
-Citizen.CreateThread(function()
-    while true do
-        Citizen.Wait(0)
-        _menuPool:ProcessMenus()
-        if IsControlJustPressed(1, 29) then
-            mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end)
-
+end 
